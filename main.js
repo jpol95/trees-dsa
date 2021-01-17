@@ -6,7 +6,8 @@ function main(){
     for (let num of numArray){
         bst.insert(num)
     }
-    console.log(findHeight(bst))
+    // bst.right.right.right.right = new Tree(13.5)
+    console.log(isBST(bst));
 }
 
 function tree(t){
@@ -24,6 +25,12 @@ const findHeight = (tree) => {
     return Math.max(leftHeight, rightHeight);
 }
 
+const isBST = (tree) => {
+ if (!tree) return true;
+ if (tree.left && tree.left.key > tree.key) return false;
+ if (tree.right && tree.right.key < tree.key) return false;
+ return isBST(tree.left) && isBST(tree.right);
+}
 
 main();
 
