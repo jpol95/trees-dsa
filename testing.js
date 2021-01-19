@@ -1,4 +1,3 @@
-const jesse = ['a', 'b', 'g', 'j'];
-const john = ['a', 'b', 'g', 'j'];
+const jesse = 10;
 
-console.log(jesse == john);
+console.log(jesse === 9 || 10)
